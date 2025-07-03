@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 // Conexión a MongoDB Atlas
-mongoose.connect('mongodb+srv://dbJairo:egSKMnJUljb2YBuB@cluster0.uhz5svh.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URI);
 
 // Esquema de usuario
 const userSchema = new mongoose.Schema({
