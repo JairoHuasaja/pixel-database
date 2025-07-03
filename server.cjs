@@ -39,4 +39,5 @@ app.post('/login', async (req, res) => {
   res.json({ success: true });
 });
 
-app.listen(4000, () => console.log('Servidor backend en http://localhost:4000'));
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => console.log(`Servidor backend en http://localhost:${PORT}`));
